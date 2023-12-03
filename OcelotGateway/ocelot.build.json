@@ -1,0 +1,32 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44303"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Gateway/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "SwaggerKey": "Gateway"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "Gateway",
+      "TakeServerFromDwonstreamService": true,
+      "Config": [
+        {
+          "Name": "Gateway v1",
+          "Version": "v1",
+          "Url": "https://localhost:44303/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {"BaseUrl": "https://localhost:44303"}
+}
+
