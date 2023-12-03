@@ -12,6 +12,58 @@
       "UpstreamPathTemplate": "/api/Gateway/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
       "SwaggerKey": "Gateway"
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "**{MSSQLHost}**",
+          "Port": "**{MSSQLPort}**"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/MSSQL/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "SwaggerKey": "MSSQL"
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "**{MySQLHost}**",
+          "Port": "**{MySQLPort}**"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/MySQL/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "SwaggerKey": "MySQL"
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "**{PostgreSQLHost}**",
+          "Port": "**{PostgreSQLPort}**"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/PostgreSQL/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "SwaggerKey": "PostgreSQL"
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "**{SQLiteHost}**",
+          "Port": "**{SQLitePort}**"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/SQLite/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "SwaggerKey": "SQLite"
     }
   ],
   "SwaggerEndPoints": [
@@ -23,6 +75,50 @@
           "Name": "Gateway v1",
           "Version": "v1",
           "Url": "**{GatewayUrl}**/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "MSSQL",
+      "TakeServerFromDwonstreamService": true,
+      "Config": [
+        {
+          "Name": "MSSQL v1",
+          "Version": "v1",
+          "Url": "**{MSSQLUrl}**/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "MySQL",
+      "TakeServerFromDwonstreamService": true,
+      "Config": [
+        {
+          "Name": "MySQL v1",
+          "Version": "v1",
+          "Url": "**{MySQLUrl}**/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "PostgreSQL",
+      "TakeServerFromDwonstreamService": true,
+      "Config": [
+        {
+          "Name": "PostgreSQL v1",
+          "Version": "v1",
+          "Url": "**{PostgreSQLUrl}**/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "SQLite",
+      "TakeServerFromDwonstreamService": true,
+      "Config": [
+        {
+          "Name": "SQLite v1",
+          "Version": "v1",
+          "Url": "**{SQLiteUrl}**/swagger/v1/swagger.json"
         }
       ]
     }

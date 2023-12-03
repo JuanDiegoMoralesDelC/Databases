@@ -5,6 +5,22 @@
         public string GatewayUrl { get; set; }
         public string GatewayHost { get; set; }
         public int GatewayPort { get; set; }
+
+        public string MSSQLUrl { get; set; }
+        public string MSSQLHost { get; set; }
+        public int MSSQLPort { get; set; }
+
+        public string MySQLUrl { get; set; }
+        public string MySQLHost { get; set; }
+        public int MySQLPort { get; set; }
+
+        public string PostgreSQLUrl { get; set; }
+        public string PostgreSQLHost { get; set; }
+        public int PostgreSQLPort { get; set; }
+
+        public string SQLiteUrl { get; set; }
+        public string SQLiteHost { get; set; }
+        public int SQLitePort { get; set; }
     }
 
     public class OcelotFileBuilder

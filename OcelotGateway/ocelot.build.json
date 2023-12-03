@@ -12,6 +12,58 @@
       "UpstreamPathTemplate": "/api/Gateway/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
       "SwaggerKey": "Gateway"
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44393"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/MSSQL/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "SwaggerKey": "MSSQL"
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44392"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/MySQL/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "SwaggerKey": "MySQL"
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44366"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/PostgreSQL/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "SwaggerKey": "PostgreSQL"
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "44304"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/SQLite/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "SwaggerKey": "SQLite"
     }
   ],
   "SwaggerEndPoints": [
@@ -23,6 +75,50 @@
           "Name": "Gateway v1",
           "Version": "v1",
           "Url": "https://localhost:44303/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "MSSQL",
+      "TakeServerFromDwonstreamService": true,
+      "Config": [
+        {
+          "Name": "MSSQL v1",
+          "Version": "v1",
+          "Url": "https://localhost:44393/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "MySQL",
+      "TakeServerFromDwonstreamService": true,
+      "Config": [
+        {
+          "Name": "MySQL v1",
+          "Version": "v1",
+          "Url": "https://localhost:44392/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "PostgreSQL",
+      "TakeServerFromDwonstreamService": true,
+      "Config": [
+        {
+          "Name": "PostgreSQL v1",
+          "Version": "v1",
+          "Url": "https://localhost:44366/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "SQLite",
+      "TakeServerFromDwonstreamService": true,
+      "Config": [
+        {
+          "Name": "SQLite v1",
+          "Version": "v1",
+          "Url": "https://localhost:44304/swagger/v1/swagger.json"
         }
       ]
     }
