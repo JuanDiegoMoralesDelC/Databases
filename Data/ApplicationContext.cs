@@ -1,13 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MSSQL.Models;
+﻿using Data.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace MSSQL
+namespace Data
 {
     public class ApplicationContext : DbContext
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
-            
+
         }
 
         public virtual DbSet<ExampleModel> ExampleModels { get; set; }
